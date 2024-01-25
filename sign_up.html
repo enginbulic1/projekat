@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp Sign In</title>
+
+    <link rel="stylesheet" href="Sign_Up.css">
+
+</head>
+<body>
+
+        <!-- HEADER POCETAK-->
+        <div class="header">
+            <div class="img-div">
+                <img src="img/logo.png">
+                <h3>Weather<span>App</span></h3>
+            </div>
+    
+            <ul>
+                <li><a href="home_page.html">Homepage</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="log_in.html">Log In</a></li>
+                <li><a href="sign_up.html">Sign Up</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="language">SR</a></li>  
+                <!-- ??????? -->
+            </ul>
+    
+                <button id="menuButton" onclick="mobileMenu()">MENU</button>
+        </div>
+    
+        <div class="pomocni"></div>
+        <!-- HEADER KRAJ-->
+
+
+        <!-- FORM-SEACTION POCETAK -->
+        <div class="form-section">
+            <div class="title">
+                <h1>User Registration</h1>
+            </div>
+
+            <form>
+
+                <div class="single-item">
+                    <label for="ime_prezime">Name and Surname:</label>
+                    <input type="text" name="ime_prezime" id="ime_prezime" placeholder="John Johnes">
+                </div>
+                <div class="single-item">
+                    <label for="korisnicko_ime">Username:</label>
+                    <input type="text" name="korisnicko_ime" id="korisnicko_ime" placeholder="John.123">
+                </div>
+                <div class="single-item">
+                    <label for="email">E-mail:</label>
+                    <input type="text" name="email" id="email" placeholder="john.johnes123@gmail.com">
+                </div>
+                <div class="single-item">
+                    <label for="lozinka">Password:</label>
+                    <input type="password" name="lozinka" id="lozinka" placeholder="********">
+                    <button class="view" onclick="viewFunction(event)">
+                        <img src="img/view.png" class="slika">
+                    </button>
+                    
+                </div>
+                <div class="single-item">
+                    <label for="ponovi_lozinku">Password Again:</label>
+                    <input type="password" name="ponovi_lozinku" id="ponovi_lozinku" placeholder="********">
+                    <button class="view" onclick="viewFunction(event)">
+                        <img src="img/view.png" class="slika">
+                    </button>
+                    
+                </div>
+                <div class="btn-div">
+                    <button id="signUpButton">Sign Up</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-content">
+            <img src="img/copyright.png">
+            2023 WeatherApp. All rights reserved.
+        </div>
+        <div class="footer-images">
+            <a href="https://www.instagram.com/"><img src="img/instagram.png"></a>
+            <a href="https://www.facebook.com/"><img src="img/facebook.png"></a>
+            <a href="https://www.youtube.com/"><img src="img/youtube.png"></a>
+        </div>
+    </div>
+
+<script src="Sign_up.js"></script> 
+
+</body>
+</html>
