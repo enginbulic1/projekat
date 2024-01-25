@@ -39,14 +39,14 @@ const log_in = document.getElementById("log_in")
 
 
 log_in.addEventListener('click', function(){
-    const baseUrl = "http://softinz20233-001-site1.gtempurl.com/api/users";
+    // const baseUrl = "http://softinz20233-001-site1.gtempurl.com/api/users";
 
     let name = document.querySelector('#korisnicko_ime');
 
     let password = document.querySelector('#lozinka');
   
   
-  fetch(baseUrl)
+  fetch("users.json")
   .then((res)=>{
     return res.json()
   })
@@ -59,6 +59,8 @@ log_in.addEventListener('click', function(){
     {
       if(data[i].username === name.value && data[i].password === password.value)
       {
+        console.log(data[i])
+        localStorage.setItem("user",data[i].username)
         window.location.href = "search.html"
         
         break;

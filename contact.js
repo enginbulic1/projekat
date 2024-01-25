@@ -1,3 +1,11 @@
+const storageUser = localStorage.getItem("user");
+const renderUser = JSON.parse(storageUser);
+
+if(!storageUser){
+    window.location.href= "index.html"
+}
+
+
 function mobileMenu() {
     var originalMenu = document.querySelector('.header ul');
     var pom = document.querySelector('.pomocni');

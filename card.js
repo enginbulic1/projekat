@@ -172,7 +172,7 @@ async function checkWeather()
 
     var data = await response.json();
     
-    // console.log(data);
+    console.log(data);
 
     var n = data.results[0].forecast.length;
     
@@ -277,3 +277,21 @@ checkWeather();
 
     
 
+const login  = document.getElementById("log_in");
+
+
+
+let storageUser = localStorage.getItem("user");
+
+// const a = document.createElement("a")
+
+if(storageUser){
+
+    login.textContent = "Logout"
+    login.style = " margin: 10px;  font-size: 18px;color: white;text-decoration: none;padding: 5px;border: 2px solid transparent;   "
+    login.addEventListener("click",function(){
+        localStorage.removeItem("user")
+        window.location.href = "log_in.html"
+
+    })
+}
